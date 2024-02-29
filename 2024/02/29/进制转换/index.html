@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>进制转换 | 苦难的大地</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem"><a class="navBlock" href="/myself"><span class="navItemTitle">About</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>进制转换</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-02-28T16:00:00.000Z" id="date"> 2024-02-29</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-02-29T07:20:22.824Z" id="updated"> 2024-02-29</time></div></span></div></div><hr><div id="post-content"><h1 id="将x进制转为10进制"><a href="#将x进制转为10进制" class="headerlink" title="将x进制转为10进制"></a>将x进制转为10进制</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span><br><br><span class="hljs-comment">// 函数：将x进制数转换为10进制数</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">toDecimal</span><span class="hljs-params">(<span class="hljs-type">const</span> std::string&amp; num, <span class="hljs-type">int</span> base)</span> </span>&#123;<br>    <span class="hljs-type">int</span> decimal = <span class="hljs-number">0</span>; <span class="hljs-comment">// 存储转换后的十进制数</span><br>    <span class="hljs-type">int</span> power = <span class="hljs-number">1</span>; <span class="hljs-comment">// base的0次方</span><br><br>    <span class="hljs-comment">// 从数字的最后一位开始</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = num.<span class="hljs-built_in">length</span>() - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) &#123;<br>        <span class="hljs-type">int</span> digit;<br>        <span class="hljs-comment">// 如果字符是数字</span><br>        <span class="hljs-keyword">if</span> (num[i] &gt;= <span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; num[i] &lt;= <span class="hljs-string">&#x27;9&#x27;</span>) &#123;<br>            digit = num[i] - <span class="hljs-string">&#x27;0&#x27;</span>;<br>        &#125;<br>        <span class="hljs-comment">// 如果字符是字母（支持大写和小写），用于表示10及以上的数字</span><br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (num[i] &gt;= <span class="hljs-string">&#x27;A&#x27;</span> &amp;&amp; num[i] &lt;= <span class="hljs-string">&#x27;F&#x27;</span>) &#123;<br>            digit = <span class="hljs-number">10</span> + (num[i] - <span class="hljs-string">&#x27;A&#x27;</span>);<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (num[i] &gt;= <span class="hljs-string">&#x27;a&#x27;</span> &amp;&amp; num[i] &lt;= <span class="hljs-string">&#x27;f&#x27;</span>) &#123;<br>            digit = <span class="hljs-number">10</span> + (num[i] - <span class="hljs-string">&#x27;a&#x27;</span>);<br>        &#125;<br>        <span class="hljs-keyword">else</span> &#123;<br>            <span class="hljs-comment">// 如果输入包含非法字符，这里简单处理为返回0</span><br>            std::cout &lt;&lt; <span class="hljs-string">&quot;Invalid character in number: &quot;</span> &lt;&lt; num[i] &lt;&lt; std::endl;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br><br>        decimal += digit * power;<br>        power *= base;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> decimal;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    std::string num;<br>    <span class="hljs-type">int</span> base;<br><br>    std::cout &lt;&lt; <span class="hljs-string">&quot;Enter the number: &quot;</span>;<br>    std::cin &gt;&gt; num;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;Enter its base: &quot;</span>;<br>    std::cin &gt;&gt; base;<br><br>    <span class="hljs-type">int</span> decimal = <span class="hljs-built_in">toDecimal</span>(num, base);<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;Decimal representation: &quot;</span> &lt;&lt; decimal &lt;&lt; std::endl;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="将10进制转为x进制"><a href="#将10进制转为x进制" class="headerlink" title="将10进制转为x进制"></a>将10进制转为x进制</h1><pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+
+// 函数：将10进制数转换为x进制数
+std::string fromDecimal(int num, int base) &#123;
+    std::string result = &quot;&quot;;
+    int remainder;
+
+    // 处理num为0的特殊情况
+    if (num == 0) &#123;
+        return &quot;0&quot;;
+    &#125;
+
+    while (num &gt; 0) &#123;
+        remainder = num % base;
+        // 如果余数小于10，直接添加对应的数字字符
+        if (remainder &lt; 10) &#123;
+            result += char(remainder + &#39;0&#39;);
+        &#125;
+        // 如果余数大于等于10，添加对应的字母字符（A-F）
+        else &#123;
+            result += char(remainder - 10 + &#39;A&#39;);
+        &#125;
+        num /= base;
+    &#125;
+
+    // 因为得到的字符串是反向的，所以需要反转
+    std::reverse(result.begin(), result.end());
+
+    return result;
+&#125;
+
+int main() &#123;
+    int num, base;
+
+    std::cout &lt;&lt; &quot;Enter the decimal number: &quot;;
+    std::cin &gt;&gt; num;
+    std::cout &lt;&lt; &quot;Enter the target base: &quot;;
+    std::cin &gt;&gt; base;
+
+    std::string converted = fromDecimal(num, base);
+    std::cout &lt;&lt; &quot;The number in base-&quot; &lt;&lt; base &lt;&lt; &quot;: &quot; &lt;&lt; converted &lt;&lt; std::endl;
+
+    return 0;
+&#125;
+</code></pre>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages"><div class="footer-link" style="width: 50%;text-align:right;border-right:1px #fe2 solid"><a href="/2024/02/29/Week%207%20sqlite3/">← 下一篇 Week 7 sqlite3</a></div><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/01/17/Week%204/">week 4 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Violet</a></h1><div id="description"><p></p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/Violet-Evergardenn"><i class="fab fa-github" alt="GitHub"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%86x%E8%BF%9B%E5%88%B6%E8%BD%AC%E4%B8%BA10%E8%BF%9B%E5%88%B6"><span class="toc-number">1.</span> <span class="toc-text">将x进制转为10进制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8610%E8%BF%9B%E5%88%B6%E8%BD%AC%E4%B8%BAx%E8%BF%9B%E5%88%B6"><span class="toc-number">2.</span> <span class="toc-text">将10进制转为x进制</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>

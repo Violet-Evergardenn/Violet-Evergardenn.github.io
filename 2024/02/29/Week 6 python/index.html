@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en" theme-mode="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Week 6 python | 苦难的大地</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="preload" as="font" crossorigin="anonymous" href="/font/Bender.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/BenderLight.ttf"><link rel="preload" as="font" crossorigin="anonymous" href="/font/JetBrainsMono-Regular.woff2"><link rel="stylesheet" href="/css/arknights.css"><style>@font-face {
+  font-family: Bender;
+  src: local('Bender'), url("/font/Bender.ttf"), url("/font/Bender.otf");
+}
+@font-face {
+  font-family: BenderLight;
+  src: local('BenderLight'), url("/font/BenderLight.ttf");
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
+}
+</style><script>var config = {"root":"/","search":{"preload":false,"activeHolder":"键入以继续","blurHolder":"数据检索","noResult":"无 $0 相关数据"},"code":{"codeInfo":"$0 - $1 行","copy":"复制"}}</script><link type="text/css" rel="stylesheet" href="/lib/encrypt/hbe.style.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lightgallery.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-zoom.css"><link type="text/css" rel="stylesheet" href="//unpkg.com/lightgallery@2.7.1/css/lg-thumbnail.css"><link type="text/css" rel="stylesheet" href="/lib/fontawesome/css/all.min.css"><script>if (window.localStorage.getItem('theme-mode') === 'light')
+ document.documentElement.setAttribute('theme-mode', 'light')
+if (window.localStorage.getItem('theme-mode') === 'dark')
+ document.documentElement.setAttribute('theme-mode', 'dark')</script><style>:root {
+ --dark-background: url('https://ak.hypergryph.com/assets/index/images/ak/pc/bk.jpg');
+ --light-background: url('/img/bk.jpg');
+ --theme-encrypt-confirm: '确认'
+}</style><script defer src="/js/arknights.js"></script><script defer src="/js/search.js"></script><script defer type="module">import mermaid from '//unpkg.com/mermaid@10.5.0/dist/mermaid.esm.mjs';
+window.mermaid = mermaid;
+code.paintMermaid();
+</script><script async src="//unpkg.com/lightgallery@2.7.1/lightgallery.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script><script async src="//unpkg.com/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script><script async src="/lib/encrypt/hbe.js"></script><script async src="/js/pjax.js"></script><script class="pjax-js">reset= () => {document.querySelector('.lg-container')?.remove()
+lightGallery(document.getElementById('post-bg'), {
+  plugins: [lgZoom,lgThumbnail],
+  selector: '.item-img'})}</script><script>window.addEventListener("load",() => {pjax = new Pjax({
+ cacheBust: false,
+ selectors: ['title','article','#aside-block','.pjax-js','data-pjax','.busuanzi'],
+ switches: {'article': Pjax.switches.sideBySide},
+ switchesOptions: {
+   'article': {
+     classNames: {
+       remove: "pjax-out",
+       add: "pjax-in"
+     }
+   }
+ }
+});
+document.addEventListener("pjax:complete", reset);reset()})</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="loading" style="opacity: 0;"><div class="loadingBar left"></div><div class="loadingBar right"></div></div><main><header class="closed"><div class="navBtn"><i class="navBtnIcon"><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span><span class="navBtnIconBar"></span></i></div><nav><div class="navItem" id="search-header"><span class="navItemTitle"><input autocomplete="off" autocorrect="off" autocapitalize="none" placeholder="数据检索" spellcheck="false" maxlength="50" type="text" id="search-input"></span></div><div class="navItem" id="search-holder"></div><div class="search-popup" tabindex="0"><div id="search-result"></div></div><ol class="navContent"><li class="navItem"><a class="navBlock" href="/"><span class="navItemTitle">Home</span></a></li><li class="navItem"><a class="navBlock" href="/myself"><span class="navItemTitle">About</span></a></li><li class="navItem" matchdata="categories,tags"><a class="navBlock" href="/archives/"><span class="navItemTitle">Archives</span></a></li></ol></nav></header><article><div id="post-bg"><div id="post-title"><h1>Week 6 python</h1><div id="post-info"><span>文章发布时间: <div class="control"><time datetime="2024-02-28T16:00:00.000Z" id="date"> 2024-02-29</time></div></span><br><span>最后更新时间: <div class="control"><time datetime="2024-02-29T07:22:33.529Z" id="updated"> 2024-02-29</time></div></span></div></div><hr><div id="post-content"><h1 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h1><p>都是一些很基础的知识点，比较特殊的是</p>
+<p>打开csv文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(sys.argv[<span class="hljs-number">1</span>],<span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file:<br>	reader = csv.DictReader(file)<br>	<span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> reader:<br>		num_len += <span class="hljs-number">1</span><br>		rows.append(row)<br><br><span class="hljs-comment"># 还可以这样存头</span><br><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(sys.argv[<span class="hljs-number">2</span>],<span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file:<br>	wok = file.read()<br></code></pre></td></tr></table></figure>
+
+<p>打开txt文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(sys.argv[<span class="hljs-number">2</span>],<span class="hljs-string">&quot;r&quot;</span>) <span class="hljs-keyword">as</span> file:<br>	wok = file.read()<br></code></pre></td></tr></table></figure>
+<h1 id="lecture"><a href="#lecture" class="headerlink" title="lecture"></a>lecture</h1><p>DNA是生物遗传信息的载体，几十年来一直被用于刑事司法。但是，DNA分析究竟是如何工作的呢？给定一个DNA序列，法医调查人员如何确定它属于谁？</p>
+<p>在名为 <code>dna</code> 的文件夹中调用 <code>dna.py</code> 的文件中，实现一个程序，用于识别 DNA 序列所属的人。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">name,AGAT AATG,TATC<br>Alice,28,42,14<br>Bob,17,22,19<br>Charlie,36,18,25<br></code></pre></td></tr></table></figure>
+
+<p>给一串dna找到他对应的关键基因所对应的数量相同的人</p>
+<pre><code class="python">import csv
+import sys
+
+
+def main():
+
+    # TODO: Check for command-line usage
+    num = len(sys.argv)
+    if(num != 3):
+        print(&quot;please use python dna.py x.csv y.txt&quot;)
+        exit(0)
+    # TODO: Read database file into a variable
+
+    rows = [] # 记录行里面的内容
+    header = [] # 记录头
+    num_len = 0 # 记录有多少行
+    with open(sys.argv[1],&quot;r&quot;) as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            num_len += 1
+            rows.append(row)
+            
+    with open(sys.argv[1],&quot;r&quot;) as file:
+        reader = csv.reader(file)
+        header.append(next(reader))
+    # TODO: Read DNA sequence file into a variable
+
+    with open(sys.argv[2],&quot;r&quot;) as file:
+        wok = file.read()
+
+    # TODO: Find longest match of each STR in DNA sequence
+
+    num = len(header[0])
+    check = []
+    for i in range(1,num):
+        wooo = longest_match(wok,header[0][i])
+        check.append(wooo)
+
+    # TODO: Check database for matching profiles
+    ans = 0
+    for i in range(num_len):
+        so = True
+        for j in range(1,num):
+            if(int(rows[i][header[0][j]]) != int(check[j-1])):
+                so = False
+                break
+        if(so == True):
+            print(rows[i][&quot;name&quot;])
+            ans += 1
+    if(ans == 0):
+        print(&quot;No match&quot;)
+    return
+
+
+def longest_match(sequence, subsequence):
+    &quot;&quot;&quot;Returns length of longest run of subsequence in sequence.&quot;&quot;&quot;
+    #处理重要的基因连续的数量
+    # Initialize variables
+    longest_run = 0
+    subsequence_length = len(subsequence)
+    sequence_length = len(sequence)
+
+    # Check each character in sequence for most consecutive runs of subsequence
+    for i in range(sequence_length):
+
+        # Initialize count of consecutive runs
+        count = 0
+
+        # Check for a subsequence match in a &quot;substring&quot; (a subset of characters) within sequence
+        # If a match, move substring to next potential match in sequence
+        # Continue moving substring and checking for matches until out of consecutive matches
+        while True:
+
+            # Adjust substring start and end
+            start = i + count * subsequence_length
+            end = start + subsequence_length
+
+            # If there is a match in the substring
+            if sequence[start:end] == subsequence:
+                count += 1
+
+            # If there is no match in the substring
+            else:
+                break
+
+        # Update most consecutive matches found
+        longest_run = max(longest_run, count)
+
+    # After checking for runs at each character in seqeuence, return longest run found
+    return longest_run
+
+
+main()
+</code></pre>
+<div id="paginator"></div></div><div id="post-footer"><div id="pages" style="justify-content: flex-end"><div class="footer-link" style="width: 50%;right:1px;border-left:1px #fe2 solid"><a href="/2024/02/29/Week%207%20sqlite3/">Week 7 sqlite3 上一篇 →</a></div></div></div></div><div class="bottom-btn"><div><a class="i-top" id="to-top" onClick="scrolls.scrolltop();" title="回到顶部" style="opacity: 0; display: none;">∧ </a><a class="i-index" id="to-index" href="#toc-div" title="文章目录">≡</a><a class="i-color" id="color-mode" onClick="colorMode.change()" title="切换主题"></a></div></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/">Violet</a></h1><div id="description"><p></p></div><div id="social-links"><a class="social" target="_blank" rel="noopener" href="https://github.com/Violet-Evergardenn"><i class="fab fa-github" alt="GitHub"></i></a></div></div><div id="aside-block"><div id="toc-div"><h1>目录</h1><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#lecture"><span class="toc-number">2.</span> <span class="toc-text">lecture</span></a></li></ol></div></div><footer><nobr>构建自 <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a></nobr><wbr><nobr> 使用主题 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknights</a></nobr><wbr><nobr> 主题作者 <a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas></body></html>
